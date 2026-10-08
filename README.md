@@ -19,6 +19,8 @@ I build infrastructure for AI agents — **harnesses, MCP servers, evaluations, 
 
 These projects share a trace contract: **the harness emits spans → `mcp-trace` makes them queryable → `agent-evals` scores the behavior → skills teach the workflow**.
 
+📐 [Architecture postmortem](https://github.com/abhishekash/agent-harness/blob/main/docs/architecture-postmortem.md) — decisions, evidence, and honest limits.
+
 ### Stack & ecosystem
 
 `Model Context Protocol` · `OpenTelemetry` · `agent harnesses` · `Agent Skills` · `Python` · `Go` · `TypeScript`
@@ -31,6 +33,6 @@ These projects share a trace contract: **the harness emits spans → `mcp-trace`
 <!--
 Next proof to add:
 - merged contributions to pi-mono / modelcontextprotocol / anthropics/skills
-- writing and postmortems from real runs
+- more postmortems from real runs
 - MCP Registry listing once mcp-trace is submitted
 -->
