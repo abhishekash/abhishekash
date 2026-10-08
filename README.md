@@ -34,5 +34,5 @@ These projects share a trace contract: **the harness emits spans → `mcp-trace`
 Next proof to add:
 - merged contributions to pi-mono / modelcontextprotocol / anthropics/skills
 - more postmortems from real runs
-- the live [MCP Registry listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.abhishekash%2Fmcp-trace/versions/0.1.0)
+- the live [MCP Registry listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.abhishekash%2Fmcp-trace/versions/0.1.1)
 -->
