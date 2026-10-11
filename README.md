@@ -23,4 +23,9 @@ My open-source work follows one engineering question: **can we explain, test, an
 
 The published **8/8 eval result is a scripted mechanism baseline**. It verifies the loop, approval gates, side effects, and instrumentation without a model or API key; it is not a live-model quality score. The next measurement layer is repeated live-provider runs with pass rate, cost, latency, and failed traces reported alongside the result.
 
+There is now one small live-provider data point: the revised `edited-write`
+task passed all 10 scorers against OpenCode Go's `mimo-v2.6-pro` model in one
+run, including a human-edited write, with 3,096 tokens, one approval, 25.672
+seconds, and $0.00151945 cost. [The eval README records the run and its limits.](https://github.com/abhishekash/agent-evals#live-provider-trial)
+
 📐 [Architecture postmortem](https://github.com/abhishekash/agent-harness/blob/main/docs/architecture-postmortem.md) — design decisions, evidence, and limits.
