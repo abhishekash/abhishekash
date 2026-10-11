@@ -1,20 +1,26 @@
 # Abhishek Ash
 
-**AI engineer building observable, testable agents.** I work on the execution layer around models: tool use, human approvals, MCP integrations, traces, and evaluations. Based in Berlin.
+**AI engineer building reliable execution infrastructure for tool-using agents.** I work at the boundary between model output and real side effects: approvals, tool execution, traces, MCP, and evaluations. Based in Berlin.
 
-My current public work connects four small projects around one question: **Can we explain and test what an agent actually did, including its side effects?**
+My open-source work follows one engineering question: **can we explain, test, and control what an agent actually did?**
 
-| Project | AI-native use case | Proof you can inspect |
+## Open-source work
+
+| Project | What it does | Evidence |
 |---|---|---|
-| [agent-harness](https://github.com/abhishekash/agent-harness) | Run a tool-using assistant with risk-based approvals, budgets, and traceable decisions. | [Recorded run](https://github.com/abhishekash/agent-harness/blob/main/examples/demo_trace_render.txt) · [architecture decisions](https://github.com/abhishekash/agent-harness/blob/main/docs/architecture-postmortem.md) |
-| [mcp-trace](https://github.com/abhishekash/mcp-trace) | Let an agent query prior runs for slow spans, token use, and approval history through MCP. | [Real trace fixture](https://github.com/abhishekash/mcp-trace/blob/main/examples/example_trace.jsonl) · [PyPI package](https://pypi.org/project/abhishekash-mcp-trace/0.1.1/) |
-| [agent-evals](https://github.com/abhishekash/agent-evals) | Catch regressions in tool routing, denied writes, edited approvals, and budget stops. | [Eight task baseline](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md) · [task definitions](https://github.com/abhishekash/agent-evals/tree/main/tasks) |
-| [agent-skills](https://github.com/abhishekash/agent-skills) | Give coding agents focused workflows for trace debugging, approval policy, MCP authoring, and eval design. | [Skill source](https://github.com/abhishekash/agent-skills/tree/main/skills) · [validator](https://github.com/abhishekash/agent-skills/blob/main/scripts/validate_skills.py) |
+| [agent-harness](https://github.com/abhishekash/agent-harness) | Runs tool-using agents with risk-based approvals, budgets, MCP tools, and OpenTelemetry traces. | [Recorded run](https://github.com/abhishekash/agent-harness/blob/main/examples/demo_trace_render.txt) · [architecture postmortem](https://github.com/abhishekash/agent-harness/blob/main/docs/architecture-postmortem.md) |
+| [mcp-trace](https://github.com/abhishekash/mcp-trace) | Installable MCP server for querying prior runs, span trees, slow spans, approvals, and token usage. | [PyPI package](https://pypi.org/project/abhishekash-mcp-trace/0.1.1/) · [real trace fixture](https://github.com/abhishekash/mcp-trace/blob/main/examples/example_trace.jsonl) |
+| [agent-evals](https://github.com/abhishekash/agent-evals) | Reproducible checks for tool routing, denied and edited writes, budgets, side effects, and trace events. | [8-task report](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md) · [task definitions](https://github.com/abhishekash/agent-evals/tree/main/tasks) |
+| [agent-skills](https://github.com/abhishekash/agent-skills) | Focused workflows for trace debugging, approval policy, MCP authoring, and eval-driven development. | [skill source](https://github.com/abhishekash/agent-skills/tree/main/skills) · [validator](https://github.com/abhishekash/agent-skills/blob/main/scripts/validate_skills.py) |
 
-### How the pieces fit
+## How the pieces fit
 
-`agent-harness` records tool calls and approval decisions as JSONL traces. `mcp-trace` exposes those traces to an MCP client. `agent-evals` runs repeatable tasks through the harness and checks the result, side effects, and trace. `agent-skills` documents the engineering workflow.
+`agent-harness` emits traceable tool calls and approval decisions. `mcp-trace` makes those traces queryable by an MCP client. `agent-evals` turns failures into repeatable checks. `agent-skills` captures the workflow so it can be reused.
 
-The published **8/8 eval baseline is scripted**: it verifies runtime mechanisms without a model or API key. It is not a live-model quality score. Live-model comparisons, with repeated runs and cost and latency reporting, are the next measurement step.
+**Start here:** [run the harness demo](https://github.com/abhishekash/agent-harness) → [inspect the trace with MCP](https://github.com/abhishekash/mcp-trace) → [read the eval report](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md).
 
-**Start here:** [Run the harness demo](https://github.com/abhishekash/agent-harness) → [inspect the trace with MCP](https://github.com/abhishekash/mcp-trace) → [read the eval results](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md).
+## What the evidence means
+
+The published **8/8 eval result is a scripted mechanism baseline**. It verifies the loop, approval gates, side effects, and instrumentation without a model or API key; it is not a live-model quality score. The next measurement layer is repeated live-provider runs with pass rate, cost, latency, and failed traces reported alongside the result.
+
+📐 [Architecture postmortem](https://github.com/abhishekash/agent-harness/blob/main/docs/architecture-postmortem.md) — design decisions, evidence, and limits.
