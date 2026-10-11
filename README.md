@@ -9,7 +9,7 @@ My open-source work follows one engineering question: **can we explain, test, an
 | Project | What it does | Evidence |
 |---|---|---|
 | [agent-harness](https://github.com/abhishekash/agent-harness) | Runs tool-using agents with risk-based approvals, budgets, MCP tools, and OpenTelemetry traces. | [Recorded run](https://github.com/abhishekash/agent-harness/blob/main/examples/demo_trace_render.txt) · [architecture postmortem](https://github.com/abhishekash/agent-harness/blob/main/docs/architecture-postmortem.md) |
-| [AgentHawk](https://github.com/abhishekash/agenthawk) | Local-first MCP server for querying agent traces, failures, approvals, activity, and run comparisons. | [Install and usage](https://github.com/abhishekash/agenthawk#install--run) · [real trace fixture](https://github.com/abhishekash/agenthawk/blob/main/examples/example_trace.jsonl) |
+| [AgentHawk](https://github.com/abhishekash/mcp-trace-inspector) | Local-first MCP server for querying agent traces, failures, approvals, activity, and run comparisons. | [Install and usage](https://github.com/abhishekash/mcp-trace-inspector#install--run) · [real trace fixture](https://github.com/abhishekash/mcp-trace-inspector/blob/main/examples/example_trace.jsonl) |
 | [agent-evals](https://github.com/abhishekash/agent-evals) | Reproducible checks for tool routing, denied and edited writes, budgets, side effects, and trace events. | [8-task report](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md) · [task definitions](https://github.com/abhishekash/agent-evals/tree/main/tasks) |
 | [agent-skills](https://github.com/abhishekash/agent-skills) | Focused workflows for trace debugging, approval policy, MCP authoring, and eval-driven development. | [skill source](https://github.com/abhishekash/agent-skills/tree/main/skills) · [validator](https://github.com/abhishekash/agent-skills/blob/main/scripts/validate_skills.py) |
 
@@ -17,7 +17,7 @@ My open-source work follows one engineering question: **can we explain, test, an
 
 `agent-harness` emits traceable tool calls and approval decisions. AgentHawk makes those traces queryable by an MCP client. `agent-evals` turns failures into repeatable checks. `agent-skills` captures the workflow so it can be reused.
 
-**Start here:** [run the harness demo](https://github.com/abhishekash/agent-harness) → [inspect the trace with AgentHawk](https://github.com/abhishekash/agenthawk) → [read the eval report](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md).
+**Start here:** [run the harness demo](https://github.com/abhishekash/agent-harness) → [inspect the trace with AgentHawk](https://github.com/abhishekash/mcp-trace-inspector) → [read the eval report](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md).
 
 ## What the evidence means
 
