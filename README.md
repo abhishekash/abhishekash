@@ -2,15 +2,7 @@
 
 **AI engineer building reliable infrastructure for tool-using agents.** I focus on the boundary between model output and real actions: approvals, tool execution, observability, and evaluations. Based in Berlin.
 
-My engineering question: **when an agent fails, can we explain what happened, turn it into a regression, and tell whether a change actually helped?**
-
-## A trace-to-regression example
-
-A coding-agent fixture attempted `cat ../outside.txt`. [agent-harness](https://github.com/abhishekash/agent-harness) blocked the workspace escape, but the original trace recorded the tool call without its returned error. That made the failure hard to diagnose from traces alone.
-
-The harness now records a bounded tool-error status and message; [mcp-trace-inspector](https://github.com/abhishekash/mcp-trace-inspector) makes the diagnostic queryable; and [agent-evals](https://github.com/abhishekash/agent-evals/blob/main/tasks/regressions/09-shell-root-escape.yaml) asserts both the blocked side effect and the presence of the error evidence. [Walk through the regression and query](https://github.com/abhishekash/agent-evals#debugging-story-a-shell-escape-becomes-a-traceable-regression).
-
-This is a **scripted runtime-contract test**, not evidence that a live model reliably chooses safe actions. The design choice is to check the outcome *and* whether an engineer can diagnose a failure afterward.
+My engineering focus: **make agent actions observable, controllable, and testable from execution through evaluation.**
 
 ## Open-source work
 
@@ -30,3 +22,7 @@ This is a **scripted runtime-contract test**, not evidence that a live model rel
 - **Keep mechanism and model evidence separate.** The checked-in [8/8 eval report](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md) is a historical scripted baseline. A separate [single live-provider trial](https://github.com/abhishekash/agent-evals#live-provider-trial) passed the revised `edited-write-v2` fixture's 10 scorers using an **automated approval edit**; one run cannot establish a pass rate or human-review quality.
 
 A natural retrieval failure, independent-user timing, and repeated live baseline/candidate evaluation are still pending. I will report those outcomes—including failed attempts—before claiming that the workflow speeds up debugging or improves agent reliability.
+
+## A runtime regression in practice
+
+A scripted coding-agent fixture attempted `cat ../outside.txt`. [agent-harness](https://github.com/abhishekash/agent-harness) blocked the workspace escape, but its trace originally omitted the returned error. The harness now records the bounded diagnostic, [mcp-trace-inspector](https://github.com/abhishekash/mcp-trace-inspector) can query it, and [agent-evals](https://github.com/abhishekash/agent-evals/blob/main/tasks/regressions/09-shell-root-escape.yaml) checks both the blocked action and its trace evidence. [See the walkthrough](https://github.com/abhishekash/agent-evals#debugging-story-a-shell-escape-becomes-a-traceable-regression). This tests a runtime contract, not live-model reliability.
