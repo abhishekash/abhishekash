@@ -2,7 +2,7 @@
 
 **Senior Staff Engineer based in Berlin.** I enjoy working on complex software systems and finding practical ways to make them easier to understand, operate, and improve.
 
-My recent open-source work explores those ideas in tool-using AI agents. The projects below cover agent runtimes, MCP-based trace analysis, repeatable evaluations, and reusable development workflows. I value thoughtful design, practical experimentation, and clear evidence.
+My recent open-source work explores those ideas in tool-using AI agents. Going forward AI Observability will become more important. Hence, i am exploring the area.
 
 ## Recent open-source work
 
