@@ -1,10 +1,10 @@
 # Abhishek Ash
 
-**AI engineer building reliable infrastructure for tool-using agents.** I focus on the boundary between model output and real actions: approvals, tool execution, observability, and evaluations. Based in Berlin.
+**Senior Staff Engineer based in Berlin.** I enjoy working on complex software systems and finding practical ways to make them easier to understand, operate, and improve.
 
-My engineering focus: **make agent actions observable, controllable, and testable from execution through evaluation.**
+My recent open-source work explores those ideas in tool-using AI agents. The projects below cover agent runtimes, MCP-based trace inspection, repeatable evaluations, and reusable development workflows. I value thoughtful design, practical experimentation, and clear evidence.
 
-## Open-source work
+## Recent open-source work
 
 | Repository | Role in the workflow | Inspect the evidence |
 |---|---|---|
