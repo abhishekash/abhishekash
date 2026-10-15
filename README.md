@@ -1,20 +1,20 @@
 # Abhishek Ash
 
-**Senior Staff Engineer based in Berlin.** I enjoy working on complex software systems and finding practical ways to make them easier to understand, operate, and improve.
+**Senior Staff Engineer based in Berlin.** I build complex software systems and make them easier to understand, operate, and improve.
 
-My recent open-source work explores those ideas in tool-using AI agents. Going forward AI Observability will become more important. Hence, i am exploring the area.
+I’m building local-first **AI agent observability** tools: capture what agents do, inspect the traces and failures, and evaluate behavior with reproducible evidence.
 
 ## Recent open-source work
 
 | Repository | Role in the workflow | Inspect the evidence |
 |---|---|---|
 | [agent-harness](https://github.com/abhishekash/agent-harness) | Reference runtime with risk-based approvals, bounded execution, MCP tools, and OpenTelemetry JSONL traces. | [Run and trace](https://github.com/abhishekash/agent-harness/blob/main/examples/demo_trace_render.txt) · [architecture decisions and limits](https://github.com/abhishekash/agent-harness/blob/main/docs/architecture-postmortem.md) |
-| [agent-observatory](https://github.com/abhishekash/agent-observatory) · 🔒 private | Local-first live terminal and web cockpit for Codex/Claude sessions, MCP calls, OTLP traces, and host activity. | [README and install](https://github.com/abhishekash/agent-observatory) · [animated demo](https://github.com/abhishekash/agent-observatory/blob/main/media/terminal-demo.gif) |
-| [SpanHound](https://github.com/abhishekash/spanhound) | Read-only MCP server for local JSONL and OTLP JSON traces: inspect failures, approvals, token usage, and run comparisons. | [Try `uvx spanhound demo`](https://github.com/abhishekash/spanhound#try-it-in-one-command) · [PyPI](https://pypi.org/project/spanhound/) · [OTLP example](https://github.com/abhishekash/spanhound/blob/main/tests/fixtures/otlp_trace.json) |
+| [Agent Observatory](https://github.com/abhishekash/agent-observatory) · source private | Live terminal and web cockpit for Codex/Claude sessions, MCP calls, OTLP traces, tokens, errors, and host activity. | Install: `uv tool install agent-observatory-cli` · [PyPI](https://pypi.org/project/agent-observatory-cli/) · [animated demo](https://github.com/abhishekash/agent-observatory/blob/main/media/terminal-demo.gif) |
+| [SpanHound](https://github.com/abhishekash/spanhound) | Formerly MCP Trace Inspector. Capture local agent traces and inspect failures, approvals, token usage, and run comparisons through read-only MCP tools. | [One-command demo](https://github.com/abhishekash/spanhound#try-it-in-one-command) · [PyPI](https://pypi.org/project/spanhound/) · [MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.abhishekash%2Fspanhound/versions) |
 | [agent-evals](https://github.com/abhishekash/agent-evals) | Task fixtures, outcome/trace scorers, repeatable trials, and a retrieval-evidence experiment spanning the harness and a controlled LangGraph graph. | [Scripted baseline](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md) · [retrieval slice and bundle helper](https://github.com/abhishekash/agent-evals/blob/main/experiments/001-retrieval-loop/BASELINE.md) |
 | [agent-skills](https://github.com/abhishekash/agent-skills) | Reusable workflows for trace debugging, approval design, MCP authoring, and eval-driven changes. | [Skills](https://github.com/abhishekash/agent-skills/tree/main/skills) · [validator](https://github.com/abhishekash/agent-skills/blob/main/scripts/validate_skills.py) |
 
-**Start here:** [try the SpanHound demo](https://github.com/abhishekash/spanhound#try-it-in-one-command) → [run the harness demo](https://github.com/abhishekash/agent-harness) → [run the regressions](https://github.com/abhishekash/agent-evals#debugging-story-a-shell-escape-becomes-a-traceable-regression).
+**Start here:** try `uvx spanhound demo` → [explore the trace](https://github.com/abhishekash/spanhound#try-it-in-one-command) → [run the harness demo](https://github.com/abhishekash/agent-harness) → [run the regressions](https://github.com/abhishekash/agent-evals#debugging-story-a-shell-escape-becomes-a-traceable-regression).
 
 ## Decisions and evidence boundaries
 
