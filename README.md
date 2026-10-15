@@ -4,6 +4,12 @@
 
 I’m building local-first **AI agent observability** tools: capture what agents do, inspect the traces and failures, and evaluate behavior with reproducible evidence.
 
+[![Agent Observatory stars](https://img.shields.io/github/stars/abhishekash/agent-observatory?style=social)](https://github.com/abhishekash/agent-observatory)
+[![Agent Observatory on PyPI](https://img.shields.io/pypi/v/agent-observatory-cli)](https://pypi.org/project/agent-observatory-cli/)
+[![SpanHound stars](https://img.shields.io/github/stars/abhishekash/spanhound?style=social)](https://github.com/abhishekash/spanhound)
+[![SpanHound on PyPI](https://img.shields.io/pypi/v/spanhound)](https://pypi.org/project/spanhound/)
+[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-listed-2e8b57)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.abhishekash%2Fspanhound/versions)
+
 ## Recent open-source work
 
 | Repository | Role in the workflow | Inspect the evidence |
