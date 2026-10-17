@@ -1,60 +1,75 @@
-# Abhishek Ash
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/profile-hero-mobile.svg">
+  <img src="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/profile-hero.svg" width="100%" alt="Abhishek Ash — making AI agents easier to understand. Open source tools for observability, trace inspection, and evaluation.">
+</picture>
 
-**Senior Staff Engineer based in Berlin.** I build complex software systems and make them easier to understand, operate, and improve.
+<p align="center">
+  <a href="#agent-observatory"><b>Watch your agents</b></a> &nbsp; · &nbsp;
+  <a href="#spanhound"><b>Inspect a failure</b></a> &nbsp; · &nbsp;
+  <a href="docs/engineering-notes.md"><b>Engineering notes</b></a>
+</p>
 
-I’m building local-first **AI agent observability** tools: capture what agents do, inspect the traces and failures, and evaluate behavior with reproducible evidence.
+I'm **Abhishek**, a Senior Staff Engineer in **Berlin**. I build tools that make complex systems easier to understand and operate. My current focus is **AI agent observability**: see what ran, find what failed, and turn that failure into a repeatable check.
 
 ## Agent Observatory
 
-[![Agent Observatory stars](https://img.shields.io/github/stars/abhishekash/agent-observatory?style=social)](https://github.com/abhishekash/agent-observatory)
-[![Agent Observatory on PyPI](https://img.shields.io/pypi/v/agent-observatory-cli?label=Agent%20Observatory)](https://pypi.org/project/agent-observatory-cli/)
+**See which agents are working, what they're doing, and where they got stuck.**
 
-Watch local Codex and Claude Code sessions, MCP calls, recorded tool results,
-tokens, and errors in a terminal or browser dashboard. It also accepts
-OpenTelemetry from instrumented agents.
+[![PyPI version](https://img.shields.io/pypi/v/agent-observatory-cli?label=PyPI&color=177f75)](https://pypi.org/project/agent-observatory-cli/) [![CI](https://github.com/abhishekash/agent-observatory/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/agent-observatory/actions/workflows/ci.yml)
+
+A local terminal and web dashboard for **Codex and Claude Code sessions**, plus **OpenTelemetry** from instrumented agents. Follow a session through its activity, MCP calls, recorded results, tokens, and errors.
+
+<a href="https://raw.githubusercontent.com/abhishekash/agent-observatory/main/media/investigation-demo.mp4">
+  <img src="https://raw.githubusercontent.com/abhishekash/agent-observatory/main/media/investigation-demo-preview.gif" width="100%" alt="Agent Observatory walkthrough: choose an agent session, inspect a failed GitHub MCP call, and open its linked trace.">
+</a>
+
+<p align="center"><sub>Actual terminal UI · synthetic example data · <a href="https://raw.githubusercontent.com/abhishekash/agent-observatory/main/media/investigation-demo.mp4">Watch the 31-second video</a> · <a href="https://github.com/abhishekash/agent-observatory/blob/main/docs/investigation-video.md">Read the walkthrough</a></sub></p>
 
 ```bash
 uvx --from agent-observatory-cli agent-observatory
 ```
 
-[Get started](https://github.com/abhishekash/agent-observatory#start-in-one-command) · [Report first-run feedback](https://github.com/abhishekash/agent-observatory/issues/new?template=first_run.yml)
+Discovers supported local session records automatically. Other runtimes can send telemetry over OTLP. Press **b** to open the browser dashboard.
 
-<a href="https://github.com/abhishekash/agent-observatory"><img src="https://raw.githubusercontent.com/abhishekash/agent-observatory/main/media/terminal-demo.gif" alt="Agent Observatory terminal dashboard: agents, activity, MCP calls, traces, and host processes" width="800"></a>
+**[Explore the repo →](https://github.com/abhishekash/agent-observatory)** &nbsp; [Setup & docs](https://github.com/abhishekash/agent-observatory#start-in-one-command) &nbsp; · &nbsp; [Report an issue](https://github.com/abhishekash/agent-observatory/issues/new?template=first_run.yml)
 
-*The walkthrough uses synthetic records. The app displays your local recorded activity.*
+## SpanHound
 
-## SpanHound — MCP Trace Inspector
+**Give your MCP client the evidence behind an agent failure.**
 
-[![SpanHound stars](https://img.shields.io/github/stars/abhishekash/spanhound?style=social)](https://github.com/abhishekash/spanhound)
-[![SpanHound on PyPI](https://img.shields.io/pypi/v/spanhound?label=SpanHound)](https://pypi.org/project/spanhound/)
-[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-listed-2e8b57)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.abhishekash%2Fspanhound/versions)
+[![PyPI version](https://img.shields.io/pypi/v/spanhound?label=PyPI&color=177f75)](https://pypi.org/project/spanhound/) [![CI](https://github.com/abhishekash/spanhound/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/spanhound/actions/workflows/ci.yml) [![MCP Registry](https://img.shields.io/badge/MCP_Registry-listed-177f75)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.abhishekash%2Fspanhound/versions)
 
-Ask an MCP client about recorded tool failures, approvals, token usage, and run
-comparisons. Capture supported Python calls, receive OTLP/HTTP, or query local
-JSONL and OTLP JSON traces. Try the bundled scripted regression without an API key:
+Capture supported Python calls, receive local OTLP/HTTP, or inspect saved **JSONL and OTLP JSON traces**. Read-only MCP tools expose recorded failures, approval decisions, token usage, and run comparisons.
+
+<a href="https://github.com/abhishekash/spanhound/blob/main/docs/shell-boundary-story.md">
+  <picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/spanhound-demo-mobile.svg">
+  <img src="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/spanhound-demo.svg" width="100%" alt="Real output from uvx spanhound demo: run_shell failed because ../outside.txt escaped the workspace root. The trace includes an automatic approval decision and six spans. This is a bundled scripted regression.">
+  </picture>
+</a>
 
 ```bash
 uvx spanhound demo
 ```
 
-[Get started](https://github.com/abhishekash/spanhound#try-it-in-one-command) · [48-second walkthrough](https://github.com/abhishekash/spanhound/blob/main/docs/media/shell-root-escape-demo.mp4) · [Report first-run feedback](https://github.com/abhishekash/spanhound/issues/new?template=first_run.yml)
+Try the bundled scripted regression without an API key. To investigate your own agent, [capture or load its traces](https://github.com/abhishekash/spanhound#capture-your-own-traces).
 
-## Supporting projects
+**[Explore the repo →](https://github.com/abhishekash/spanhound)** &nbsp; [Connect an MCP client](https://github.com/abhishekash/spanhound#client-configuration) &nbsp; · &nbsp; [Watch the demo](https://github.com/abhishekash/spanhound/blob/main/docs/media/shell-root-escape-demo.mp4)
 
-| Repository | Role in the workflow | Inspect the evidence |
-|---|---|---|
-| [agent-harness](https://github.com/abhishekash/agent-harness) | Reference runtime with risk-based approvals, bounded execution, MCP tools, and OpenTelemetry JSONL traces. | [Run and trace](https://github.com/abhishekash/agent-harness/blob/main/examples/demo_trace_render.txt) · [architecture decisions and limits](https://github.com/abhishekash/agent-harness/blob/main/docs/architecture-postmortem.md) |
-| [agent-evals](https://github.com/abhishekash/agent-evals) | Task fixtures, outcome/trace scorers, repeatable trials, and a retrieval-evidence experiment spanning the harness and a controlled LangGraph graph. | [Scripted baseline](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md) · [retrieval slice and bundle helper](https://github.com/abhishekash/agent-evals/blob/main/experiments/001-retrieval-loop/BASELINE.md) |
-| [agent-skills](https://github.com/abhishekash/agent-skills) | Reusable workflows for trace debugging, approval design, MCP authoring, and eval-driven changes. | [Skills](https://github.com/abhishekash/agent-skills/tree/main/skills) · [validator](https://github.com/abhishekash/agent-skills/blob/main/scripts/validate_skills.py) |
+<sub>Both commands need Python 3.11+ and <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. Both projects are open source under the MIT license.</sub>
 
-## Decisions and evidence boundaries
+## From a failed run to a regression test
 
-- **Capture only what is needed.** Tool arguments and successful outputs are opt-in in the harness; a trace that lacks retrieval results must not claim to prove repeated-output overlap.
-- **Use existing spans before inventing a new standard.** The [retrieval experiment](https://github.com/abhishekash/agent-evals/blob/main/experiments/001-retrieval-loop/M0-DECISION.md) currently uses a thin, hashed export helper and operation-specific readiness checks. Its harness and LangGraph cases are scripted controls, not general adapters or a verified model fix.
-- **Keep mechanism and model evidence separate.** The checked-in [8/8 eval report](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md) is a historical scripted baseline. A separate [single live-provider trial](https://github.com/abhishekash/agent-evals#live-provider-trial) passed the revised `edited-write-v2` fixture's 10 scorers using an **automated approval edit**; one run cannot establish a pass rate or human-review quality.
+The tools grew out of a concrete bug: an agent runtime blocked a shell command that escaped its workspace, but its trace omitted the returned error. The fix connected **the runtime, the trace inspector, and a regression test**. [Read the case study →](https://github.com/abhishekash/agent-evals#debugging-story-a-shell-escape-becomes-a-traceable-regression)
 
-A natural retrieval failure, independent-user timing, and repeated live baseline/candidate evaluation are still pending. I will report those outcomes—including failed attempts—before claiming that the workflow speeds up debugging or improves agent reliability.
+| Project | What you can use it for |
+| :--- | :--- |
+| **[agent-harness](https://github.com/abhishekash/agent-harness)** | Explore a reference runtime with approvals, bounded tool execution, and OpenTelemetry traces. |
+| **[agent-evals](https://github.com/abhishekash/agent-evals)** | Run task fixtures, score outcomes and traces, and check regressions. |
+| **[agent-skills](https://github.com/abhishekash/agent-skills)** | Reuse workflows for trace debugging, MCP development, and evaluation. |
 
-## A runtime regression in practice
+I document the [design decisions, experiment results, and current limits](docs/engineering-notes.md) alongside the code.
 
-A scripted coding-agent fixture attempted `cat ../outside.txt`. [agent-harness](https://github.com/abhishekash/agent-harness) blocked the workspace escape, but its trace originally omitted the returned error. The harness now records the bounded diagnostic, [SpanHound](https://github.com/abhishekash/spanhound) can query it, and [agent-evals](https://github.com/abhishekash/agent-evals/blob/main/tasks/regressions/09-shell-root-escape.yaml) checks both the blocked action and its trace evidence. [See the walkthrough](https://github.com/abhishekash/agent-evals#debugging-story-a-shell-escape-becomes-a-traceable-regression). This tests a runtime contract, not live-model reliability.
+---
+
+**Building with agents?** Try a tool on a real workflow and [tell me what was missing](https://github.com/abhishekash/agent-observatory/issues/new?template=first_run.yml). If it helps, star the repository so you can find it again and follow the project for updates.

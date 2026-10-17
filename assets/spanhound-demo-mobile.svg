@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="480" viewBox="0 0 700 480" role="img" aria-labelledby="title desc">
+<title id="title">SpanHound demo output excerpt</title><desc id="desc">A scripted regression: run_shell failed because ../outside.txt escaped the workspace. The trace has six spans and an automatic approval.</desc>
+<rect width="700" height="480" rx="16" fill="#0e1821"/>
+<path d="M0 64h700" stroke="#2b3d49"/>
+<g font-family="Inter,Segoe UI,Arial,sans-serif"><text x="28" y="40" fill="#f0f6f6" font-size="25" font-weight="600">SpanHound</text><text x="672" y="40" text-anchor="end" fill="#a8beca" font-size="18">SCRIPTED REGRESSION</text></g>
+<g font-family="DejaVu Sans Mono,Consolas,monospace" font-size="26">
+<text x="28" y="119" fill="#70e1c4">$ <tspan fill="#f0f6f6">uvx spanhound demo</tspan></text>
+<text x="28" y="181" fill="#a8beca">Tool: <tspan fill="#d8e4ea">run_shell</tspan></text>
+<rect x="16" y="204" width="668" height="142" rx="8" fill="#3a2524"/>
+<g fill="#f4ba9d"><text x="28" y="241">Failure: error:</text><text x="28" y="282">shell path escapes workspace root:</text><text x="28" y="323">'../outside.txt'</text></g>
+<text x="28" y="390" fill="#a8beca">Approval: <tspan fill="#d8e4ea">approve (auto)</tspan></text>
+<text x="28" y="438" fill="#a8beca" font-size="20">Trace: 563e779ee8fa2d7069fc63ed2cf9c8ec (6 spans)</text>
+</g></svg>

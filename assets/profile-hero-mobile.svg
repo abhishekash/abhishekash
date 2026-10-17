@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="470" viewBox="0 0 700 470" role="img" aria-labelledby="title desc">
+<title id="title">Abhishek Ash — making agents easier to understand</title><desc id="desc">Open source tools for observability, MCP, and evaluation. Software engineer in Berlin.</desc>
+<rect width="700" height="470" rx="18" fill="#101c26"/>
+<path d="M36 41h44" stroke="#70e1c4" stroke-width="5"/>
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+<text x="36" y="86" fill="#eef5f4" font-size="27" font-weight="700" letter-spacing="2">ABHISHEK ASH</text>
+<text x="36" y="119" fill="#a9bec8" font-size="19" letter-spacing="2">SOFTWARE ENGINEER · BERLIN</text>
+<text x="32" y="206" fill="#f3f7f6" font-size="62" font-weight="700" letter-spacing="-1.5">Making agents</text>
+<text x="32" y="276" fill="#70e1c4" font-size="62" font-weight="700" letter-spacing="-1.5">easier to understand.</text>
+<text x="36" y="329" fill="#becdd4" font-size="23">Open source tools for the work behind the answer.</text>
+<path d="M36 368h628" stroke="#34505c"/>
+<text x="36" y="420" fill="#b4c8d2" font-size="20" letter-spacing="1">OBSERVABILITY · MCP · EVALUATION</text>
+</g></svg>

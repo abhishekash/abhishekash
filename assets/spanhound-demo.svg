@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="480" viewBox="0 0 1280 480" role="img" aria-labelledby="title desc">
+<title id="title">SpanHound bundled regression demo</title><desc id="desc">Verified output: run_shell failed because the shell path escaped the workspace root. Automatic approval. Six recorded spans.</desc>
+<rect width="1280" height="480" rx="16" fill="#0e1821"/>
+<path d="M0 62h1280" stroke="#2b3d49"/>
+<g font-family="Inter,Segoe UI,Arial,sans-serif"><text x="36" y="39" fill="#f0f6f6" font-size="21" font-weight="600">SpanHound</text><text x="1244" y="39" text-anchor="end" fill="#a8beca" font-size="17" letter-spacing="1.3">BUNDLED SCRIPTED REGRESSION</text></g>
+<g font-family="DejaVu Sans Mono,Consolas,monospace" font-size="22">
+<text x="36" y="111" fill="#70e1c4">$ <tspan fill="#f0f6f6">uvx spanhound demo</tspan></text>
+<text x="36" y="164" fill="#f0f6f6">SpanHound demo — recorded agent failure</text>
+<text x="36" y="209" fill="#a8beca">Task: <tspan fill="#d8e4ea">Inspect the parent path and report whether it can be read.</tspan></text>
+<text x="36" y="249" fill="#a8beca">Tool: <tspan fill="#d8e4ea">run_shell</tspan></text>
+<rect x="24" y="269" width="1232" height="52" rx="7" fill="#3a2524"/>
+<text x="36" y="303" fill="#f4ba9d">Failure: error: shell path escapes workspace root: '../outside.txt'</text>
+<text x="36" y="356" fill="#a8beca">Approval: <tspan fill="#d8e4ea">approve (auto)</tspan></text>
+<text x="36" y="396" fill="#a8beca">Trace: <tspan fill="#d8e4ea">563e779ee8fa2d7069fc63ed2cf9c8ec (6 spans)</tspan></text>
+</g>
+<g font-family="Inter,Segoe UI,Arial,sans-serif"><text x="36" y="451" fill="#9db4c0" font-size="19">From the agent-evals regression fixture. No API key needed.</text></g></svg>
