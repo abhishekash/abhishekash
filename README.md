@@ -4,8 +4,8 @@
 </picture>
 
 <p align="center">
-  <a href="#agent-goechala"><b>Watch your agents</b></a> &nbsp; · &nbsp;
-  <a href="#spanhound"><b>Inspect a failure</b></a> &nbsp; · &nbsp;
+  <a href="https://github.com/abhishekash/agent-goechala"><b>Watch your agents</b></a> &nbsp; · &nbsp;
+  <a href="https://github.com/abhishekash/spanhound"><b>Inspect a failure</b></a> &nbsp; · &nbsp;
   <a href="docs/engineering-notes.md"><b>Engineering notes</b></a>
 </p>
 
