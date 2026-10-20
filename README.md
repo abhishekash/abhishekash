@@ -11,7 +11,7 @@
 
 I'm **Abhishek**, a Senior Staff Engineer in **Berlin**. I build tools that make complex systems easier to understand and operate. My current focus is **AI agent observability**: see what ran, find what failed, and turn that failure into a repeatable check.
 
-## Agent Goechala
+## [Agent Goechala](https://github.com/abhishekash/agent-goechala)
 
 **A clear view of every agent.**
 
