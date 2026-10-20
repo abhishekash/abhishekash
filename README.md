@@ -4,40 +4,42 @@
 </picture>
 
 <p align="center">
-  <a href="#agent-observatory"><b>Watch your agents</b></a> &nbsp; · &nbsp;
+  <a href="#agent-goechala"><b>Watch your agents</b></a> &nbsp; · &nbsp;
   <a href="#spanhound"><b>Inspect a failure</b></a> &nbsp; · &nbsp;
   <a href="docs/engineering-notes.md"><b>Engineering notes</b></a>
 </p>
 
 I'm **Abhishek**, a Senior Staff Engineer in **Berlin**. I build tools that make complex systems easier to understand and operate. My current focus is **AI agent observability**: see what ran, find what failed, and turn that failure into a repeatable check.
 
-## Agent Observatory
+## Agent Goechala
 
-**See which agents are working, what they're doing, and where they got stuck.**
+**A clear view of every agent.**
 
-[![PyPI version](https://img.shields.io/pypi/v/agent-observatory-cli?label=PyPI&color=177f75)](https://pypi.org/project/agent-observatory-cli/) [![CI](https://github.com/abhishekash/agent-observatory/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/agent-observatory/actions/workflows/ci.yml)
+[![Terminal interface](https://img.shields.io/badge/interface-terminal-ffbd69?labelColor=191621)](https://github.com/abhishekash/agent-goechala) [![Local data](https://img.shields.io/badge/data-local-c5adff?labelColor=191621)](https://github.com/abhishekash/agent-goechala#start) [![CI](https://github.com/abhishekash/agent-goechala/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/agent-goechala/actions/workflows/ci.yml)
 
-A local terminal and web dashboard for **Codex and Claude Code sessions**, plus **OpenTelemetry** from instrumented agents. Follow a session through its activity, MCP calls, recorded results, tokens, and errors.
+A local terminal monitor for **Codex, Claude Code, OpenCode, and OpenTelemetry agents**. See which sessions are working and what they last did, then inspect their prompts, recorded progress, MCP calls, and linked traces.
 
-<a href="https://raw.githubusercontent.com/abhishekash/agent-observatory/main/media/investigation-demo.mp4">
-  <img src="https://raw.githubusercontent.com/abhishekash/agent-observatory/main/media/investigation-demo-preview.gif" width="100%" alt="Agent Observatory walkthrough: choose an agent session, inspect a failed GitHub MCP call, and open its linked trace.">
+<a href="https://github.com/abhishekash/agent-goechala/raw/refs/heads/main/media/goechala-demo.mp4">
+  <img src="https://raw.githubusercontent.com/abhishekash/agent-goechala/main/media/goechala-demo-preview.gif" width="100%" alt="Agent Goechala in its charcoal, amber, and lavender theme: select an agent session, read its prompts, inspect a failed MCP call, and open its trace.">
 </a>
 
-<p align="center"><sub>Actual terminal UI · synthetic example data · <a href="https://raw.githubusercontent.com/abhishekash/agent-observatory/main/media/investigation-demo.mp4">Watch the 31-second video</a> · <a href="https://github.com/abhishekash/agent-observatory/blob/main/docs/investigation-video.md">Read the walkthrough</a></sub></p>
+<p align="center"><sub>Actual terminal UI · synthetic example data · <a href="https://github.com/abhishekash/agent-goechala/raw/refs/heads/main/media/goechala-demo.mp4">Watch the 29-second video</a> · <a href="https://github.com/abhishekash/agent-goechala/blob/main/docs/investigation-video.md">Read the walkthrough</a></sub></p>
 
 ```bash
-uvx --from agent-observatory-cli agent-observatory
+uvx --from git+https://github.com/abhishekash/agent-goechala agent-goechala
 ```
 
-Discovers supported local session records automatically. Other runtimes can send telemetry over OTLP. Press **b** to open the browser dashboard.
+Supported local session records are discovered automatically. Local monitoring and recorded-progress summaries need no account or API key. Other runtimes can send telemetry over OTLP.
 
-**[Explore the repo →](https://github.com/abhishekash/agent-observatory)** &nbsp; [Setup & docs](https://github.com/abhishekash/agent-observatory#start-in-one-command) &nbsp; · &nbsp; [Report an issue](https://github.com/abhishekash/agent-observatory/issues/new?template=first_run.yml)
+Named for the mountain pass, with amber and lavender ridges framing a bright trail. Formerly **Agent Observatory**.
+
+**[Explore the repo →](https://github.com/abhishekash/agent-goechala)** &nbsp; [Setup & docs](https://github.com/abhishekash/agent-goechala#start) &nbsp; · &nbsp; [Report an issue](https://github.com/abhishekash/agent-goechala/issues/new?template=first_run.yml)
 
 ## SpanHound
 
 **Give your MCP client the evidence behind an agent failure.**
 
-[![PyPI version](https://img.shields.io/pypi/v/spanhound?label=PyPI&color=177f75)](https://pypi.org/project/spanhound/) [![CI](https://github.com/abhishekash/spanhound/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/spanhound/actions/workflows/ci.yml) [![MCP Registry](https://img.shields.io/badge/MCP_Registry-listed-177f75)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.abhishekash%2Fspanhound/versions)
+[![PyPI version](https://img.shields.io/pypi/v/spanhound?label=PyPI&color=c5adff&labelColor=191621)](https://pypi.org/project/spanhound/) [![CI](https://github.com/abhishekash/spanhound/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/spanhound/actions/workflows/ci.yml) [![MCP Registry](https://img.shields.io/badge/MCP_Registry-listed-c5adff?labelColor=191621)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.abhishekash%2Fspanhound/versions)
 
 Capture supported Python calls, receive local OTLP/HTTP, or inspect saved **JSONL and OTLP JSON traces**. Read-only MCP tools expose recorded failures, approval decisions, token usage, and run comparisons.
 
@@ -56,7 +58,7 @@ Try the bundled scripted regression without an API key. To investigate your own 
 
 **[Explore the repo →](https://github.com/abhishekash/spanhound)** &nbsp; [Connect an MCP client](https://github.com/abhishekash/spanhound#client-configuration) &nbsp; · &nbsp; [Watch the demo](https://github.com/abhishekash/spanhound/blob/main/docs/media/shell-root-escape-demo.mp4)
 
-<sub>Both commands need Python 3.11+ and <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. Both projects are open source under the MIT license.</sub>
+<sub>Both commands need Python 3.11+ and <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. Agent Goechala also needs Git. Both projects use the MIT license.</sub>
 
 ## From a failed run to a regression test
 
@@ -72,4 +74,4 @@ I document the [design decisions, experiment results, and current limits](docs/e
 
 ---
 
-**Building with agents?** Try a tool on a real workflow and [tell me what was missing](https://github.com/abhishekash/agent-observatory/issues/new?template=first_run.yml). If it helps, star the repository so you can find it again and follow the project for updates.
+**Building with agents?** Try a tool on a real workflow and [tell me what was missing](https://github.com/abhishekash/agent-goechala/issues/new?template=first_run.yml). If it helps, star the repository so you can find it again and follow the project for updates.
