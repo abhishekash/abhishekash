@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">Agenturm tower mark</title>
+<desc id="desc">A geometric amber tower with three battlements and a single observation window.</desc>
+<rect x="16" y="16" width="480" height="480" rx="112" fill="#121018" stroke="#51475f" stroke-width="2"/>
+<path d="M144 112h48v48h40v-48h48v48h40v-48h48v112h-40l16 144h24v40H144v-40h24l16-144h-40Z
+         M240 264v56h32v-56a16 16 0 0 0-32 0Z" fill="#ffbd69" fill-rule="evenodd"/>
+</svg>

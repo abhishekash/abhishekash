@@ -11,7 +11,7 @@
 
 I'm **Abhishek**, a Senior Staff Engineer in **Berlin**. I build tools that make complex systems easier to understand and operate. My current focus is **AI agent observability**: see what ran, find what failed, and turn that failure into a repeatable check.
 
-## [Agenturm](https://github.com/abhishekash/agenturm)
+## <img src="assets/agenturm-icon.svg" width="28" height="28" alt="Agenturm tower icon"> [Agenturm](https://github.com/abhishekash/agenturm)
 
 **A clear view of every agent.**
 
@@ -19,11 +19,11 @@ I'm **Abhishek**, a Senior Staff Engineer in **Berlin**. I build tools that make
 
 A local terminal monitor for **Codex, Claude Code, OpenCode, and OpenTelemetry agents**. See which sessions are working and what they last did, then inspect their prompts, recorded progress, MCP calls, and linked traces.
 
-<a href="https://github.com/abhishekash/agenturm/raw/refs/heads/main/media/goechala-demo.mp4">
-  <img src="https://raw.githubusercontent.com/abhishekash/agenturm/main/media/goechala-demo-preview.gif" width="100%" alt="Agenturm in its charcoal, amber, and lavender theme: select an agent session, read its prompts, inspect a failed MCP call, and open its trace.">
+<a href="https://github.com/abhishekash/agenturm">
+  <img src="assets/agenturm-terminal.png" width="100%" alt="Agenturm terminal with its tower icon and name: agent sessions, recorded progress, MCP operations, and recent work.">
 </a>
 
-<p align="center"><sub>Actual terminal UI · synthetic example data · <a href="https://github.com/abhishekash/agenturm/raw/refs/heads/main/media/goechala-demo.mp4">Watch the 29-second video</a> · <a href="https://github.com/abhishekash/agenturm/blob/main/docs/investigation-video.md">Read the walkthrough</a></sub></p>
+<p align="center"><sub>Actual terminal UI · synthetic example data · <a href="https://github.com/abhishekash/agenturm/blob/main/docs/investigation-video.md">Read the walkthrough</a></sub></p>
 
 ```bash
 uvx --from git+https://github.com/abhishekash/agenturm agenturm
@@ -31,7 +31,7 @@ uvx --from git+https://github.com/abhishekash/agenturm agenturm
 
 Supported local session records are discovered automatically. Local monitoring and recorded-progress summaries need no account or API key. Other runtimes can send telemetry over OTLP.
 
-Named for a watchtower: a clear vantage point over agent activity, represented by an amber tower mark. Formerly **Agent Observatory**.
+A compact tower mark and four focused themes: **Current**, **Bright**, **Dark**, and **Solarized**. Formerly **Agent Observatory**.
 
 **[Explore the repo →](https://github.com/abhishekash/agenturm)** &nbsp; [Setup & docs](https://github.com/abhishekash/agenturm#start) &nbsp; · &nbsp; [Report an issue](https://github.com/abhishekash/agenturm/issues/new?template=first_run.yml)
 
