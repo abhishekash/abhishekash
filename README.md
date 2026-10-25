@@ -1,39 +1,56 @@
 <picture>
   <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/profile-hero-mobile.svg">
-  <img src="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/profile-hero.svg" width="100%" alt="Abhishek Ash — making AI agents easier to understand. Open source tools for observability, trace inspection, and evaluation.">
+  <img src="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/profile-hero.svg" width="100%" alt="Abhishek Ash — know what your agents are doing. Open-source tools for local observability, trace inspection, and regression checks.">
 </picture>
 
 <p align="center">
-  <a href="https://github.com/abhishekash/agenturm"><b>Watch your agents</b></a> &nbsp; · &nbsp;
+  <a href="https://www.agenturm.dev/"><b>Watch your agents</b></a> &nbsp; · &nbsp;
   <a href="https://github.com/abhishekash/spanhound"><b>Inspect a failure</b></a> &nbsp; · &nbsp;
   <a href="docs/engineering-notes.md"><b>Engineering notes</b></a>
 </p>
 
-I'm **Abhishek**, a Senior Staff Engineer in **Berlin**. I build tools that make complex systems easier to understand and operate. My current focus is **AI agent observability**: see what ran, find what failed, and turn that failure into a repeatable check.
+I'm **Abhishek**, a Senior Staff Engineer in **Berlin**. I build open-source tools that make complex systems easier to understand and operate. My current focus is **AI agent observability**: see what ran, find what failed, and turn that failure into a repeatable check.
 
-## <img src="assets/agenturm-icon.svg" width="28" height="28" alt="Agenturm tower icon"> [Agenturm](https://github.com/abhishekash/agenturm)
+## <img src="assets/agenturm-icon.svg" width="28" height="28" alt="Agenturm tower-and-lens icon"> [Agenturm](https://www.agenturm.dev/)
 
-**A clear view of every agent.**
+**Know what your agents are doing.**
 
-[![Terminal interface](https://img.shields.io/badge/interface-terminal-ffbd69?labelColor=191621)](https://github.com/abhishekash/agenturm) [![Local data](https://img.shields.io/badge/data-local-c5adff?labelColor=191621)](https://github.com/abhishekash/agenturm#start) [![CI](https://github.com/abhishekash/agenturm/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/agenturm/actions/workflows/ci.yml)
+[![Terminal interface](https://img.shields.io/badge/interface-terminal-dceb5a?labelColor=222722)](https://www.agenturm.dev/#terminal) [![Local by default](https://img.shields.io/badge/data-local_by_default-e8e4da?labelColor=222722)](https://github.com/abhishekash/agenturm/blob/main/docs/privacy.md) [![CI](https://github.com/abhishekash/agenturm/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/agenturm/actions/workflows/ci.yml)
 
-A local terminal monitor for **Codex, Claude Code, OpenCode, and OpenTelemetry agents**. See which sessions are working and what they last did, then inspect their prompts, recorded progress, MCP calls, and linked traces.
+Local observability for **Codex, Claude Code, OpenCode, and Pi**, from one terminal. See their recorded progress, inspect tool calls, and find what needs your attention. Connect other supported tools through **OpenTelemetry**.
 
-<a href="https://github.com/abhishekash/agenturm">
-  <img src="assets/agenturm-terminal.png" width="100%" alt="Agenturm terminal with its tower icon and name: agent sessions, recorded progress, MCP operations, and recent work.">
+<a href="https://www.agenturm.dev/#demo">
+  <img src="assets/agenturm-terminal.png" width="100%" alt="Actual Agenturm terminal showing Codex waiting on a GitHub tool response, OpenCode working, Claude Code completed, and the selected session's recorded activity. Synthetic example records.">
 </a>
 
-<p align="center"><sub>Actual terminal UI · synthetic example data · <a href="https://github.com/abhishekash/agenturm/blob/main/docs/investigation-video.md">Read the walkthrough</a></sub></p>
+<p align="center"><sub>Actual terminal UI · synthetic records · <a href="https://www.agenturm.dev/#demo">Try the interactive demo</a> · <a href="https://github.com/abhishekash/agenturm/blob/main/docs/investigation-video.md">Read the walkthrough</a></sub></p>
+
+- **Find the session.** Bring recent supported local records together automatically, without restarting your agents.
+- **Inspect the call.** Read prompts, commands, MCP arguments, responses, and failures.
+- **Follow the trace.** Put a tool call back in the context of its run.
+
+Keyboard-first, with seven views and four themes: **Current (Alpine Ember)**, **Bright**, **Dark**, and **Solarized**. Replies and approvals stay in the agent's own terminal.
+
+### Start locally
+
+Requires **Python 3.11+**, Git, and [uv](https://docs.astral.sh/uv/getting-started/installation/). On macOS or Linux:
+
+```bash
+curl -fsSL https://www.agenturm.dev/install.sh | bash
+agenturm
+```
+
+[Review the installer](https://www.agenturm.dev/install.sh) before running it. Or run directly from the source repository with uv, including on Windows:
 
 ```bash
 uvx --from git+https://github.com/abhishekash/agenturm agenturm
 ```
 
-Supported local session records are discovered automatically. Local monitoring and recorded-progress summaries need no account or API key. Other runtimes can send telemetry over OTLP.
+**Local by default. No account required.** Supported records are read on your machine and stored in local SQLite. Local monitoring and recorded-progress summaries need no API key.
 
-A compact tower mark and four focused themes: **Current**, **Bright**, **Dark**, and **Solarized**. Formerly **Agent Observatory**.
+Captured messages, commands, and tool results may contain sensitive project information. Optional AI summaries send documented session evidence to your configured provider only when explicitly requested. [Read the capture and privacy boundaries](https://github.com/abhishekash/agenturm/blob/main/docs/privacy.md).
 
-**[Explore the repo →](https://github.com/abhishekash/agenturm)** &nbsp; [Setup & docs](https://github.com/abhishekash/agenturm#start) &nbsp; · &nbsp; [Report an issue](https://github.com/abhishekash/agenturm/issues/new?template=first_run.yml)
+**[Explore Agenturm →](https://www.agenturm.dev/)** &nbsp; [Source](https://github.com/abhishekash/agenturm) &nbsp; · &nbsp; [Setup & docs](https://github.com/abhishekash/agenturm/blob/main/docs/usage.md) &nbsp; · &nbsp; [Integrations](https://github.com/abhishekash/agenturm/blob/main/docs/frameworks.md) &nbsp; · &nbsp; [Report an issue](https://github.com/abhishekash/agenturm/issues/new?template=first_run.yml)
 
 ## SpanHound
 
@@ -58,7 +75,7 @@ Try the bundled scripted regression without an API key. To investigate your own 
 
 **[Explore the repo →](https://github.com/abhishekash/spanhound)** &nbsp; [Connect an MCP client](https://github.com/abhishekash/spanhound#client-configuration) &nbsp; · &nbsp; [Watch the demo](https://github.com/abhishekash/spanhound/blob/main/docs/media/shell-root-escape-demo.mp4)
 
-<sub>Both commands need Python 3.11+ and <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. Agenturm also needs Git. Both projects use the MIT license.</sub>
+<sub>SpanHound also needs Python 3.11+ and <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. Both projects use the MIT license.</sub>
 
 ## From a failed run to a regression test
 
