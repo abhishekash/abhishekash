@@ -19,17 +19,17 @@ I'm **Abhishek**, a Senior Staff Engineer in **Berlin**. I build open-source too
 
 Local observability for **Codex, Claude Code, OpenCode, and Pi**, from one terminal. See their recorded progress, inspect tool calls, and find what needs your attention. Connect other supported tools through **OpenTelemetry**.
 
-<a href="https://www.agenturm.dev/#demo">
-  <img src="assets/agenturm-terminal.png" width="100%" alt="Actual Agenturm terminal showing Codex waiting on a GitHub tool response, OpenCode working, Claude Code completed, and the selected session's recorded activity. Synthetic example records.">
+<a href="assets/agenturm-demo.mp4">
+  <img src="assets/agenturm-demo.gif" width="100%" alt="Animated 29-second Agenturm terminal walkthrough using synthetic records: agent sessions, recorded prompts, MCP evidence, and a linked trace.">
 </a>
 
-<p align="center"><sub>Actual terminal UI · synthetic records · <a href="https://www.agenturm.dev/#demo">Try the interactive demo</a> · <a href="https://github.com/abhishekash/agenturm/blob/main/docs/investigation-video.md">Read the walkthrough</a></sub></p>
+<p align="center"><sub>Actual terminal UI · synthetic records · <a href="https://www.agenturm.dev/#live-ui">Try the interactive demo</a> · <a href="assets/agenturm-demo.mp4">Watch the full 29-second video</a></sub></p>
 
 - **Find the session.** Bring recent supported local records together automatically, without restarting your agents.
 - **Inspect the call.** Read prompts, commands, MCP arguments, responses, and failures.
 - **Follow the trace.** Put a tool call back in the context of its run.
 
-Keyboard-first, with seven views and four themes: **Current (Alpine Ember)**, **Bright**, **Dark**, and **Solarized**. Replies and approvals stay in the agent's own terminal.
+Keyboard-first, with seven views and five terminal themes: **Observation** (default), **Current (Alpine Ember)**, **Bright**, **Dark**, and **Solarized**. Replies and approvals stay in the agent's own terminal.
 
 ### Start locally
 
