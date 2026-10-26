@@ -1,27 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="470" viewBox="0 0 1280 470" role="img" aria-labelledby="title desc">
 <title id="title">Abhishek Ash — know what your agents are doing</title>
 <desc id="desc">Senior Staff Engineer in Berlin. Building Agenturm for local coding-agent observability, SpanHound for trace inspection, and agent-evals for regression checks. An architectural drawing of Berlin's observation tower echoes Agenturm's website.</desc>
-<rect x=".5" y=".5" width="1279" height="469" rx="6" fill="#f2efe7" stroke="#cbcfc2"/>
+<rect x=".5" y=".5" width="1279" height="469" rx="6" fill="#100f16" stroke="#302b3b"/>
 
 <g font-family="DejaVu Sans Mono,monospace">
-  <path d="M48 47h32" stroke="#7352a3" stroke-width="3"/>
-  <text x="94" y="53" fill="#596157" font-size="14" letter-spacing="2">OPEN SOURCE / BUILT IN THE OPEN</text>
-  <text x="48" y="107" fill="#222722" font-size="22" font-weight="bold" letter-spacing="2">ABHISHEK ASH</text>
-  <text x="48" y="138" fill="#596157" font-size="15">SENIOR STAFF ENGINEER · BERLIN</text>
+  <path d="M48 47h32" stroke="#c5adff" stroke-width="3"/>
+  <text x="94" y="53" fill="#a6a0b2" font-size="14" letter-spacing="2">OPEN SOURCE / BUILT IN THE OPEN</text>
+  <text x="48" y="107" fill="#f4f1eb" font-size="22" font-weight="bold" letter-spacing="2">ABHISHEK ASH</text>
+  <text x="48" y="138" fill="#a6a0b2" font-size="15">SENIOR STAFF ENGINEER · BERLIN</text>
 </g>
-<rect x="48" y="320" width="96" height="5" fill="#dceb5a"/>
+<rect x="48" y="320" width="96" height="5" fill="#ffbd69"/>
 <g font-family="DejaVu Sans,Arial,sans-serif" font-size="66" font-weight="bold" letter-spacing="-1.5">
-  <text x="44" y="227" fill="#222722">Know what your</text>
-  <text x="44" y="307" fill="#222722">agents are doing.</text>
+  <text x="44" y="227" fill="#f4f1eb">Know what your</text>
+  <text x="44" y="307" fill="#f4f1eb">agents are doing.</text>
 </g>
-<text x="48" y="363" fill="#596157" font-family="DejaVu Sans,Arial,sans-serif" font-size="21">Local observability. Trace inspection. Regression checks.</text>
-<path d="M916 48v310" stroke="#cbcfc2"/>
-<g transform="translate(990 44) scale(1.05)" fill="none"><g xmlns="http://www.w3.org/2000/svg" stroke="#737A6D" stroke-width="1.1"><path d="M60 8v75M57 21h6M56 35h8M57 48h6M56 61h8M58 75h4M54 131l-8 125h28l-8-125M54 256l6-125 6 125M33 258h54M25 267h70M60 136v119" /><ellipse cx="60" cy="108" rx="31" ry="24" /><path d="M29 108h62M33 119h54M38 127h44M42 89h36M60 84v48M44 88l-5 20 5 19M76 88l5 20-5 19M24 108H9M111 108H96M104 84v48M101 84h6M101 132h6M13 83v49M10 83h6M10 132h6" /></g><circle xmlns="http://www.w3.org/2000/svg" cx="60" cy="8" r="3" fill="#7352A3" /></g>
-<text x="960" y="363" fill="#596157" font-family="DejaVu Sans Mono,monospace" font-size="13">BUILT IN BERLIN</text>
-<path d="M48 400h1184" stroke="#cbcfc2"/>
+<text x="48" y="363" fill="#a6a0b2" font-family="DejaVu Sans,Arial,sans-serif" font-size="21">Local observability. Trace inspection. Regression checks.</text>
+<path d="M916 48v310" stroke="#302b3b"/>
+<g transform="translate(990 44) scale(1.05)" fill="none"><g xmlns="http://www.w3.org/2000/svg" stroke="#a6a0b2" stroke-width="1.1"><path d="M60 8v75M57 21h6M56 35h8M57 48h6M56 61h8M58 75h4M54 131l-8 125h28l-8-125M54 256l6-125 6 125M33 258h54M25 267h70M60 136v119" /><ellipse cx="60" cy="108" rx="31" ry="24" /><path d="M29 108h62M33 119h54M38 127h44M42 89h36M60 84v48M44 88l-5 20 5 19M76 88l5 20-5 19M24 108H9M111 108H96M104 84v48M101 84h6M101 132h6M13 83v49M10 83h6M10 132h6" /></g><circle xmlns="http://www.w3.org/2000/svg" cx="60" cy="8" r="3" fill="#c5adff" /></g>
+<text x="960" y="363" fill="#a6a0b2" font-family="DejaVu Sans Mono,monospace" font-size="13">BUILT IN BERLIN</text>
+<path d="M48 400h1184" stroke="#302b3b"/>
 <g font-family="DejaVu Sans Mono,monospace" font-size="16">
-  <text x="48" y="441" fill="#222722">01 / AGENTURM</text>
-  <text x="475" y="441" fill="#7352a3">02 / SPANHOUND</text>
-  <text x="900" y="441" fill="#32684c">03 / AGENT-EVALS</text>
+  <text x="48" y="441" fill="#f4f1eb">01 / AGENTURM</text>
+  <text x="475" y="441" fill="#c5adff">02 / SPANHOUND</text>
+  <text x="900" y="441" fill="#86e3b5">03 / AGENT-EVALS</text>
 </g>
 </svg>

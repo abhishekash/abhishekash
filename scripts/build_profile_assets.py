@@ -4,15 +4,15 @@ from xml.etree import ElementTree
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
-PAPER, INK, MUTED = "#f2efe7", "#222722", "#596157"
-RULE, SIGNAL, VIOLET, GREEN = "#cbcfc2", "#dceb5a", "#7352a3", "#32684c"
+CANVAS, INK, MUTED = "#100f16", "#f4f1eb", "#a6a0b2"
+RULE, SIGNAL, VIOLET, GREEN = "#302b3b", "#ffbd69", "#c5adff", "#86e3b5"
 
 
 def shell(width, height, body):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
 <title id="title">Abhishek Ash — know what your agents are doing</title>
 <desc id="desc">Senior Staff Engineer in Berlin. Building Agenturm for local coding-agent observability, SpanHound for trace inspection, and agent-evals for regression checks. An architectural drawing of Berlin's observation tower echoes Agenturm's website.</desc>
-<rect x=".5" y=".5" width="{width-1}" height="{height-1}" rx="6" fill="{PAPER}" stroke="{RULE}"/>
+<rect x=".5" y=".5" width="{width-1}" height="{height-1}" rx="6" fill="{CANVAS}" stroke="{RULE}"/>
 {body}
 </svg>'''
 

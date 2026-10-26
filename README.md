@@ -15,7 +15,7 @@ I'm **Abhishek**, a Senior Staff Engineer in **Berlin**. I build open-source too
 
 **Know what your agents are doing.**
 
-[![Terminal interface](https://img.shields.io/badge/interface-terminal-dceb5a?labelColor=222722)](https://www.agenturm.dev/#terminal) [![Local by default](https://img.shields.io/badge/data-local_by_default-e8e4da?labelColor=222722)](https://github.com/abhishekash/agenturm/blob/main/docs/privacy.md) [![CI](https://github.com/abhishekash/agenturm/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/agenturm/actions/workflows/ci.yml)
+[![Terminal interface](https://img.shields.io/badge/interface-terminal-ffbd69?labelColor=191621)](https://www.agenturm.dev/#terminal) [![Local by default](https://img.shields.io/badge/data-local_by_default-c5adff?labelColor=191621)](https://github.com/abhishekash/agenturm/blob/main/docs/privacy.md) [![CI](https://github.com/abhishekash/agenturm/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/agenturm/actions/workflows/ci.yml)
 
 Local observability for **Codex, Claude Code, OpenCode, and Pi**, from one terminal. See their recorded progress, inspect tool calls, and find what needs your attention. Connect other supported tools through **OpenTelemetry**.
 
