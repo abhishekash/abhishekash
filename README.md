@@ -33,18 +33,20 @@ Keyboard-first, with seven views and five terminal themes: **Observation** (defa
 
 ### Start locally
 
-Requires **Python 3.11+**, Git, and [uv](https://docs.astral.sh/uv/getting-started/installation/). On macOS or Linux:
+Requires **Python 3.11+** and [uv](https://docs.astral.sh/uv/getting-started/installation/). Run the published package without installing it:
 
 ```bash
-curl -fsSL https://www.agenturm.dev/install.sh | bash
+uvx agenturm
+```
+
+Or install the `agenturm` command with:
+
+```bash
+uv tool install agenturm
 agenturm
 ```
 
-[Review the installer](https://www.agenturm.dev/install.sh) before running it. Or run directly from the source repository with uv, including on Windows:
-
-```bash
-uvx --from git+https://github.com/abhishekash/agenturm agenturm
-```
+The [website](https://www.agenturm.dev/) also has a macOS/Linux installer.
 
 **Local by default. No account required.** Supported records are read on your machine and stored in local SQLite. Local monitoring and recorded-progress summaries need no API key.
 
