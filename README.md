@@ -1,96 +1,65 @@
-<picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/profile-hero-mobile.svg">
-  <img src="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/profile-hero.svg" width="100%" alt="Abhishek Ash — know what your agents are doing. Open-source tools for local observability, trace inspection, and regression checks.">
-</picture>
+# Abhishek Ash
 
-<p align="center">
-  <a href="https://www.agenturm.dev/"><b>Watch your agents</b></a> &nbsp; · &nbsp;
-  <a href="https://github.com/abhishekash/spanhound"><b>Inspect a failure</b></a> &nbsp; · &nbsp;
-  <a href="docs/engineering-notes.md"><b>Engineering notes</b></a>
-</p>
+**Senior Staff Engineer at HelloFresh · Berlin**
 
-I'm **Abhishek**, a Senior Staff Engineer in **Berlin**. I build open-source tools that make complex systems easier to understand and operate. My current focus is **AI agent observability**: see what ran, find what failed, and turn that failure into a repeatable check.
+I build distributed systems and tools that make AI agents easier to understand. At HelloFresh, I work on distributed systems and agentic architecture, with a background in event-driven platforms, APIs, and reliability. My independent open-source projects explore how to inspect what ran, understand what failed, and turn a failure into a repeatable check.
 
-## <img src="assets/agenturm-icon.svg" width="28" height="28" alt="Agenturm tower-and-lens icon"> [Agenturm](https://www.agenturm.dev/)
+[Website](https://abhishekash.github.io/) · [Writing](https://abhishekash.github.io/blog/) · [Professional background & contact](https://www.linkedin.com/in/abhishekash/) · [RSS](https://abhishekash.github.io/blog/feed.xml)
 
-**Know what your agents are doing.**
+## Selected writing
 
-[![Terminal interface](https://img.shields.io/badge/interface-terminal-ffbd69?labelColor=191621)](https://www.agenturm.dev/#terminal) [![Local by default](https://img.shields.io/badge/data-local_by_default-c5adff?labelColor=191621)](https://github.com/abhishekash/agenturm/blob/main/docs/privacy.md) [![CI](https://github.com/abhishekash/agenturm/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/agenturm/actions/workflows/ci.yml)
+- **[Agents Don't Fail Loudly](https://abhishekash.github.io/blog/agents-dont-fail-loudly.html)** — An agent calls a refund API. The request times out. Did the refund happen? On unknown outcomes, idempotency, and recovery. *Essay, 30 October 2026.*
+- **[On quality metrics and systems thinking](https://www.linkedin.com/posts/abhishekash_the-fallacy-of-sacrificing-quality-to-build-activity-7162430428891582464-0UeC)** — Goodhart’s law and the limits of measuring quality through a metric wall. *LinkedIn note.*
+- **[On building hyper-personal apps](https://www.linkedin.com/posts/abhishekash_with-the-commoditization-of-ai-models-building-activity-7477636246845120513-cbI8)** — What changes when you build software for one person. *LinkedIn note.*
+- **[Engineering notes](docs/engineering-notes.md)** — Design decisions, experiments, and the limits of the evidence behind the agent tools.
 
-Local observability for **Codex, Claude Code, OpenCode, and Pi**, from one terminal. See their recorded progress, inspect tool calls, and find what needs your attention. Connect other supported tools through **OpenTelemetry**.
+## Open source
 
-<a href="assets/agenturm-demo.mp4">
-  <img src="assets/agenturm-demo.gif" width="100%" alt="Animated 29-second Agenturm terminal walkthrough using synthetic records: agent sessions, recorded prompts, MCP evidence, and a linked trace.">
-</a>
+### [Agenturm](https://www.agenturm.dev/)
 
-<p align="center"><sub>Actual terminal UI · synthetic records · <a href="https://www.agenturm.dev/#live-ui">Try the interactive demo</a> · <a href="assets/agenturm-demo.mp4">Watch the full 29-second video</a></sub></p>
+Local observability for **Codex, Claude Code, OpenCode, and Pi**, from one terminal. Find sessions, inspect recorded progress and tool calls, and follow traces. Local monitoring needs no account or API key; replies and approvals stay in the agent’s own terminal.
 
-- **Find the session.** Bring recent supported local records together automatically, without restarting your agents.
-- **Inspect the call.** Read prompts, commands, MCP arguments, responses, and failures.
-- **Follow the trace.** Put a tool call back in the context of its run.
-
-Keyboard-first, with seven views and five terminal themes: **Observation** (default), **Current (Alpine Ember)**, **Bright**, **Dark**, and **Solarized**. Replies and approvals stay in the agent's own terminal.
-
-### Start locally
-
-Requires **Python 3.11+** and [uv](https://docs.astral.sh/uv/getting-started/installation/). Run the published package without installing it:
-
-```bash
+```sh
 uvx agenturm
 ```
 
-Or install the `agenturm` command with:
+[Interactive demo](https://www.agenturm.dev/#demo) · [Source](https://github.com/abhishekash/agenturm) · [Setup](https://github.com/abhishekash/agenturm/blob/main/docs/usage.md) · [Capture & privacy boundaries](https://github.com/abhishekash/agenturm/blob/main/docs/privacy.md)
 
-```bash
-uv tool install agenturm
-agenturm
-```
+<details>
+<summary>Watch the terminal walkthrough — synthetic example records</summary>
 
-The [website](https://www.agenturm.dev/) also has a macOS/Linux installer.
-
-**Local by default. No account required.** Supported records are read on your machine and stored in local SQLite. Local monitoring and recorded-progress summaries need no API key.
-
-Captured messages, commands, and tool results may contain sensitive project information. Optional AI summaries send documented session evidence to your configured provider only when explicitly requested. [Read the capture and privacy boundaries](https://github.com/abhishekash/agenturm/blob/main/docs/privacy.md).
-
-**[Explore Agenturm →](https://www.agenturm.dev/)** &nbsp; [Source](https://github.com/abhishekash/agenturm) &nbsp; · &nbsp; [Setup & docs](https://github.com/abhishekash/agenturm/blob/main/docs/usage.md) &nbsp; · &nbsp; [Integrations](https://github.com/abhishekash/agenturm/blob/main/docs/frameworks.md) &nbsp; · &nbsp; [Report an issue](https://github.com/abhishekash/agenturm/issues/new?template=first_run.yml)
-
-## SpanHound
-
-**Give your MCP client the evidence behind an agent failure.**
-
-[![PyPI version](https://img.shields.io/pypi/v/spanhound?label=PyPI&color=c5adff&labelColor=191621)](https://pypi.org/project/spanhound/) [![CI](https://github.com/abhishekash/spanhound/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/abhishekash/spanhound/actions/workflows/ci.yml) [![MCP Registry](https://img.shields.io/badge/MCP_Registry-listed-c5adff?labelColor=191621)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.abhishekash%2Fspanhound/versions)
-
-Capture supported Python calls, receive local OTLP/HTTP, or inspect saved **JSONL and OTLP JSON traces**. Read-only MCP tools expose recorded failures, approval decisions, token usage, and run comparisons.
-
-<a href="https://github.com/abhishekash/spanhound/blob/main/docs/shell-boundary-story.md">
-  <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/spanhound-demo-mobile.svg">
-  <img src="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/spanhound-demo.svg" width="100%" alt="Real output from uvx spanhound demo: run_shell failed because ../outside.txt escaped the workspace root. The trace includes an automatic approval decision and six spans. This is a bundled scripted regression.">
-  </picture>
+<a href="https://github.com/abhishekash/abhishekash/blob/main/assets/agenturm-demo.mp4">
+  <img src="https://raw.githubusercontent.com/abhishekash/abhishekash/main/assets/agenturm-demo.gif" width="100%" alt="29-second Agenturm terminal walkthrough using synthetic records: sessions, prompts, MCP evidence, and a linked trace.">
 </a>
 
-```bash
+Actual terminal UI, using synthetic records. [Watch the full video](https://github.com/abhishekash/abhishekash/blob/main/assets/agenturm-demo.mp4).
+
+</details>
+
+### [SpanHound](https://github.com/abhishekash/spanhound)
+
+Read-only MCP tools for inspecting recorded agent failures, approvals, token usage, and run comparisons. Capture supported Python calls, receive local OTLP/HTTP, or load saved traces.
+
+```sh
 uvx spanhound demo
 ```
 
-Try the bundled scripted regression without an API key. To investigate your own agent, [capture or load its traces](https://github.com/abhishekash/spanhound#capture-your-own-traces).
+[Reproducible debugging story](https://github.com/abhishekash/spanhound/blob/main/docs/shell-boundary-story.md) · [48-second walkthrough](https://github.com/abhishekash/spanhound/blob/main/docs/media/shell-root-escape-demo.mp4) · [Connect an MCP client](https://github.com/abhishekash/spanhound#client-configuration)
 
-**[Explore the repo →](https://github.com/abhishekash/spanhound)** &nbsp; [Connect an MCP client](https://github.com/abhishekash/spanhound#client-configuration) &nbsp; · &nbsp; [Watch the demo](https://github.com/abhishekash/spanhound/blob/main/docs/media/shell-root-escape-demo.mp4)
+Both commands require **Python 3.11+** and [uv](https://docs.astral.sh/uv/getting-started/installation/). The SpanHound demo is a bundled scripted regression and needs no API key.
 
-<sub>SpanHound also needs Python 3.11+ and <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. Both projects use the MIT license.</sub>
+### Runtime, evaluation, and workflows
 
-## From a failed run to a regression test
+| Project | What it does | Start here |
+| :--- | :--- | :--- |
+| [agent-harness](https://github.com/abhishekash/agent-harness) | Reference runtime with approval gates, bounded execution, MCP tools, and OpenTelemetry traces. | [Architecture decisions](https://github.com/abhishekash/agent-harness/blob/main/docs/architecture-postmortem.md) |
+| [agent-evals](https://github.com/abhishekash/agent-evals) | Task fixtures and trace-backed scorers for routing, approvals, budgets, and side effects. | [Evaluation report](https://github.com/abhishekash/agent-evals/blob/main/results/RESULTS.md) |
+| [agent-skills](https://github.com/abhishekash/agent-skills) | Reusable workflows for trace debugging, MCP development, and evaluation. | [Browse the skills](https://github.com/abhishekash/agent-skills/tree/main/skills) |
 
-The tools grew out of a concrete bug: an agent runtime blocked a shell command that escaped its workspace, but its trace omitted the returned error. The fix connected **the runtime, the trace inspector, and a regression test**. [Read the case study →](https://github.com/abhishekash/agent-evals#debugging-story-a-shell-escape-becomes-a-traceable-regression)
+The tools connect through a concrete bug: the harness blocked a command that escaped its workspace, but the trace omitted the returned error. Recording that diagnostic made the failure inspectable in SpanHound and testable in agent-evals. [Read the regression walkthrough](https://github.com/abhishekash/agent-evals#debugging-story-a-shell-escape-becomes-a-traceable-regression).
 
-| Project | What you can use it for |
-| :--- | :--- |
-| **[agent-harness](https://github.com/abhishekash/agent-harness)** | Explore a reference runtime with approvals, bounded tool execution, and OpenTelemetry traces. |
-| **[agent-evals](https://github.com/abhishekash/agent-evals)** | Run task fixtures, score outcomes and traces, and check regressions. |
-| **[agent-skills](https://github.com/abhishekash/agent-skills)** | Reuse workflows for trace debugging, MCP development, and evaluation. |
-
-I document the [design decisions, experiment results, and current limits](docs/engineering-notes.md) alongside the code.
+The published **8/8 report is a scripted runtime baseline**, not a live-model reliability score. [Engineering notes](docs/engineering-notes.md) record the experiments and their limits.
 
 ---
 
-**Building with agents?** Try a tool on a real workflow and [tell me what was missing](https://github.com/abhishekash/agenturm/issues/new?template=first_run.yml). If it helps, star the repository so you can find it again and follow the project for updates.
+Outside work: small apps for my family and a soft spot for the Himalayas. More [about me](https://abhishekash.github.io/#about), or [say hello on LinkedIn](https://www.linkedin.com/in/abhishekash/).
